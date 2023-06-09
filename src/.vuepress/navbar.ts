@@ -6,21 +6,11 @@ export default navbar([
     text: "指南",
     icon: "book",
     link: "/guide/",
-    // prefix: "/guide/"
-    // children: [
-    //   {
-    //     text: "Bar",
-    //     icon: "lightbulb",
-    //     prefix: "bar/",
-    //     children: ["baz", { text: "...", icon: "ellipsis", link: "" }],
-    //   },
-    //   {
-    //     text: "Foo",
-    //     icon: "lightbulb",
-    //     prefix: "foo/",
-    //     children: ["ray", { text: "...", icon: "ellipsis", link: "" }],
-    //   },
-    // ],
+  },
+  {
+    text: "配置",
+    icon: "gears",
+    link: "/config/",
   },
   {
     text: "授权",

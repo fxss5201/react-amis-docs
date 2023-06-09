@@ -1,6 +1,6 @@
 ---
-title: 指南
-icon: lightbulb
+title: 配置
+icon: gears
 isOriginal: true
 date: 2023-06-09
 ---

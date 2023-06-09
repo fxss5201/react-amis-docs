@@ -9,5 +9,11 @@ export default sidebar({
       prefix: "guide/",
       children: "structure",
     },
+    {
+      text: "配置",
+      icon: "gear",
+      prefix: "config/",
+      children: "structure",
+    },
   ],
 });

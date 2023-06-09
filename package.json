@@ -11,9 +11,13 @@
     "docs:update-package": "yarn dlx vp-update"
   },
   "devDependencies": {
-    "@vuepress/client": "2.0.0-beta.62",
+    "@vuepress/client": "2.0.0-beta.63",
     "vue": "^3.2.47",
-    "vuepress": "2.0.0-beta.62",
-    "vuepress-theme-hope": "2.0.0-beta.222"
+    "vuepress": "2.0.0-beta.63",
+    "vuepress-plugin-search-pro": "^2.0.0-beta.224",
+    "vuepress-theme-hope": "2.0.0-beta.224"
+  },
+  "dependencies": {
+    "nodejs-jieba": "^0.0.2"
   }
 }

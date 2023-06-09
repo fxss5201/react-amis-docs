@@ -3,18 +3,18 @@ import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
 export default hopeTheme({
-  hostname: "https://vuepress-theme-hope-docs-demo.netlify.app",
+  hostname: "https:www.fxss.work",
 
   author: {
-    name: "Mr.Hope",
-    url: "https://mrhope.site",
+    name: "fxss",
+    url: "https://github.com/fxss5201",
   },
 
-  iconAssets: "fontawesome-with-brands",
+  iconAssets: "fontawesome",
 
   logo: "/logo.svg",
 
-  repo: "vuepress-theme-hope/vuepress-theme-hope",
+  repo: "fxss5201/react-amis-docs",
 
   docsDir: "src",
 
@@ -24,15 +24,11 @@ export default hopeTheme({
   // sidebar
   sidebar,
 
-  footer: "默认页脚",
+  footer: "泛积木-低代码：可以广泛使用的积木框架，可以广泛适用的低代码平台。",
 
   displayFooter: true,
 
-  encrypt: {
-    config: {
-      "/demo/encrypt.html": ["1234"],
-    },
-  },
+  copyright: `copyright © 2023-至今 <a target="_blank" href="https://github.com/fxss5201" class="author">樊小书生</a><a style="margin-left: 4px;" target="_blank" href="https://beian.miit.gov.cn/#/Integrated/index" class="author">晋ICP备17012454号</a>`,
 
   // page meta
   metaLocales: {
@@ -40,13 +36,14 @@ export default hopeTheme({
   },
 
   plugins: {
+    autoCatalog: true,
     // You should generate and use your own comment service
     comment: {
       provider: "Giscus",
-      repo: "vuepress-theme-hope/giscus-discussions",
-      repoId: "R_kgDOG_Pt2A",
+      repo: "fxss5201/react-amis-docs-comment",
+      repoId: "R_kgDOJtNxMw",
       category: "Announcements",
-      categoryId: "DIC_kwDOG_Pt2M4COD69",
+      categoryId: "DIC_kwDOJtNxM84CXE-e",
     },
 
     // All features are enabled for demo, only preserve features you need here
@@ -68,9 +65,6 @@ export default hopeTheme({
       mermaid: true,
       playground: {
         presets: ["ts", "vue"],
-      },
-      presentation: {
-        plugins: ["highlight", "math", "search", "notes", "zoom"],
       },
       stylize: [
         {
