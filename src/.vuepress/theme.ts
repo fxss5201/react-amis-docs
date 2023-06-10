@@ -3,7 +3,7 @@ import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
 export default hopeTheme({
-  hostname: "https:www.fxss.work",
+  hostname: "https://www.fxss.work",
 
   author: {
     name: "fxss",
