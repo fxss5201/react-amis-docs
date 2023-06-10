@@ -2,4 +2,4 @@
 User-agent:*
 Disallow:
 
-Sitemap: https://vuepress-theme-hope-docs-demo.netlify.app/react-amis-docs/sitemap.xml
+Sitemap: https://www.fxss.work/sitemap.xml
