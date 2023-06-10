@@ -8,6 +8,11 @@ export default navbar([
     link: "/guide/",
   },
   {
+    text: "网站使用",
+    icon: "circle-play",
+    link: "/use/",
+  },
+  {
     text: "配置",
     icon: "gears",
     link: "/config/",

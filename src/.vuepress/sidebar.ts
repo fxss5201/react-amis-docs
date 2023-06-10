@@ -10,6 +10,12 @@ export default sidebar({
       children: "structure",
     },
     {
+      text: "网站使用",
+      icon: "circle-play",
+      prefix: "use/",
+      children: "structure",
+    },
+    {
       text: "配置",
       icon: "gear",
       prefix: "config/",
