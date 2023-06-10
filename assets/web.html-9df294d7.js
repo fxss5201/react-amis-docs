@@ -1,0 +1,1 @@
+import{_ as e}from"./plugin-vue_export-helper-c27b6911.js";import{o as t,c as o,a as c}from"./app-f7773787.js";const _={},s=c("p",null,"网站配置",-1),n=[s];function r(a,l){return t(),o("div",null,n)}const m=e(_,[["render",r],["__file","web.html.vue"]]);export{m as default};
