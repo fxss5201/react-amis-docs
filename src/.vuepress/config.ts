@@ -13,16 +13,13 @@ export default defineUserConfig({
   head: [
     [
       'script', {},
-      `<script>
-      var _hmt = _hmt || [];
+      `var _hmt = _hmt || [];
       (function() {
         var hm = document.createElement("script");
         hm.src = "https://hm.baidu.com/hm.js?31a3c177589348e7ac3e6bbf638624d7";
         var s = document.getElementsByTagName("script")[0]; 
         s.parentNode.insertBefore(hm, s);
-      })();
-      </script>
-      `
+      })();`
     ]
   ],
 
