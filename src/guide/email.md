@@ -1,7 +1,7 @@
 ---
 title: 邮箱配置
 icon: envelope
-order: 3
+order: 4
 isOriginal: true
 date: 2023-06-09
 ---

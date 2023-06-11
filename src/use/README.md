@@ -1,6 +1,6 @@
 ---
-title: 网站使用
-icon: circle-play
+title: 使用指引
+icon: hand-point-right
 isOriginal: true
 date: 2023-06-09
 ---
