@@ -2,4 +2,4 @@
 User-agent:*
 Disallow:
 
-Sitemap: https://www.fxss.work/react-amis-docs/sitemap.xml
+Sitemap: https://www.fxss.work/sitemap.xml
