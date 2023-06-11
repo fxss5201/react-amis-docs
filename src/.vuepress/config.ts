@@ -4,7 +4,7 @@ import { cut } from "nodejs-jieba";
 import { searchProPlugin } from "vuepress-plugin-search-pro";
 
 export default defineUserConfig({
-  base: "/react-amis-docs/",
+  base: "/",
 
   lang: "zh-CN",
   title: "泛积木-低代码",

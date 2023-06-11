@@ -53,7 +53,7 @@ window.config = {
 }
 ```
 
-## 前端配置
+## 前端`config.js`
 
 ### logoName
 
