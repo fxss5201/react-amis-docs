@@ -13,6 +13,8 @@ debug模式是指唤起[调试工具](https://aisuda.bce.baidu.com/amis/zh-CN/do
 1. 运行日志，主要是 api 及数据转换的日志；
 2. 查看组件数据链，Debug 工具展开后，点击任意组件就能看到这个组件的数据链。
 
+建议：**移动端使用[调试工具](https://aisuda.bce.baidu.com/amis/zh-CN/docs/extend/debug)的时候横屏使用。**
+
 以及在移动端唤起[vConsole](https://github.com/Tencent/vConsole/blob/dev/README_CN.md)，可以在移动端查看开发者调试面板。
 
 ## 如何进入debug模式
