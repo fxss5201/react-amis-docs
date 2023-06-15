@@ -71,6 +71,11 @@ highlights:
         icon: bug
         details: debug模式助力查找修复bug
         link: ./use/debug.md
+        
+      - title: 浏览量
+        icon: chalkboard
+        details: 根据页面接口请求的页面浏览量，更精准查看页面浏览量
+        link: ./use/view.md
 ---
 
 本文档使用的是 [Vuepress Theme Hope](https://vuepress-theme-hope.github.io/v2/zh/)。
