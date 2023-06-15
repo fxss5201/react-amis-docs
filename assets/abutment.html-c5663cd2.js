@@ -1,0 +1,1 @@
+import{_ as e}from"./plugin-vue_export-helper-c27b6911.js";import{o as t,c as o,a as c}from"./app-1f89ce09.js";const n={},_=c("p",null,"适配对接",-1),s=[_];function a(r,l){return t(),o("div",null,s)}const i=e(n,[["render",a],["__file","abutment.html.vue"]]);export{i as default};
