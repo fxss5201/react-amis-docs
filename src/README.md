@@ -66,6 +66,11 @@ highlights:
         icon: tv
         details: 可以自由的配置页面内容
         link: ./config/web.md
+        
+      - title: debug模式
+        icon: bug
+        details: debug模式助力查找修复bug
+        link: ./use/debug.md
 ---
 
 本文档使用的是 [Vuepress Theme Hope](https://vuepress-theme-hope.github.io/v2/zh/)。
