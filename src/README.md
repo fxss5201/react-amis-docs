@@ -76,6 +76,17 @@ highlights:
         icon: chalkboard
         details: 根据页面接口请求的页面浏览量，更精准查看页面浏览量
         link: ./use/view.md
+
+  - header: 演示示例
+    description: 常用功能的演示示例。
+    bgImage: https://theme-hope-assets.vuejs.press/bg/5-light.svg
+    bgImageDark: https://theme-hope-assets.vuejs.press/bg/5-dark.svg
+    features:
+
+      - title: 增删改查
+        icon: table
+        details: 增删改查功能实现及详情代码
+        link: ./demo/table.md
 ---
 
 本文档使用的是 [Vuepress Theme Hope](https://vuepress-theme-hope.github.io/v2/zh/)。
