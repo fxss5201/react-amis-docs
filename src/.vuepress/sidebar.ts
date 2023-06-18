@@ -21,5 +21,11 @@ export default sidebar({
       prefix: "config/",
       children: "structure",
     },
+    {
+      text: "演示示例",
+      icon: "laptop-code",
+      prefix: "demo/",
+      children: "structure",
+    },
   ],
 });
