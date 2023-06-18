@@ -18,6 +18,11 @@ export default navbar([
     link: "/config/",
   },
   {
+    text: "演示示例",
+    icon: "laptop-code",
+    link: "/demo/",
+  },
+  {
     text: "授权",
     icon: "key",
     link: "https://jimu.fxss.work",
