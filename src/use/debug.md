@@ -15,7 +15,11 @@ debug模式是指唤起[调试工具](https://aisuda.bce.baidu.com/amis/zh-CN/do
 
 建议：**移动端使用[调试工具](https://aisuda.bce.baidu.com/amis/zh-CN/docs/extend/debug)的时候横屏使用。**
 
-以及在移动端唤起[vConsole](https://github.com/Tencent/vConsole/blob/dev/README_CN.md)，可以在移动端查看开发者调试面板。
+![debug模式示例](https://img.fxss.work/debug-demo.png)
+
+以及在移动端唤起[vConsole](https://github.com/Tencent/vConsole/blob/dev/README_CN.md)，可以在移动端查看开发者调试面板，可以查看 **Log / System / Network / Element / Storage** 等信息。
+
+![vConsle示例](https://img.fxss.work/vConsle-demo.png)
 
 ## 如何进入debug模式
 
