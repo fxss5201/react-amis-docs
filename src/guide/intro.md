@@ -3,7 +3,7 @@ title: 介绍
 icon: circle-info
 order: 1
 isOriginal: true
-date: 2023-06-09
+date: 2023-06-24
 ---
 
 泛积木-低代码：可以广泛使用的积木框架，可以广泛适用的低代码平台。

@@ -3,7 +3,7 @@ title: 网站部署
 icon: upload
 order: 1
 isOriginal: true
-date: 2023-06-09
+date: 2023-06-24
 ---
 
 平台使用的是阿里云的轻量服务器，可以点击 [阿里云-云小站特惠](https://www.aliyun.com/minisite/goods?spm=5176.11533457.J_1089570.8.140753333LxW4Y) 进行购买，部署环境使用的 [宝塔服务器面板，一键全能部署及管理，送你10850元礼包，点我领取](https://www.bt.cn/?invite_code=M19qbWF0Y24=) 。
