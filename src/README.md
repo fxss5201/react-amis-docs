@@ -3,8 +3,8 @@ home: true
 icon: home
 title: 项目主页
 heroImage: /logo.svg
-bgImage: https://theme-hope-assets.vuejs.press/bg/6-light.svg
-bgImageDark: https://theme-hope-assets.vuejs.press/bg/6-dark.svg
+bgImage: https://img.fxss.work/bg1-light.svg
+bgImageDark: https://img.fxss.work/bg1-dark.svg
 bgImageStyle:
   background-attachment: fixed
 heroText: 泛积木-低代码
@@ -22,15 +22,15 @@ actions:
 highlights:
   - header: 一次部署
     image: /assets/image/box.svg
-    bgImage: https://theme-hope-assets.vuejs.press/bg/3-light.svg
-    bgImageDark: https://theme-hope-assets.vuejs.press/bg/3-dark.svg
+    bgImage: https://img.fxss.work/bg2-light.svg
+    bgImageDark: https://img.fxss.work/bg2-dark.svg
     highlights:
       - title: 前端页面只需部署一次，后续开发及上线都在网站内，极速上线。
 
   - header: 功能项
     image: /assets/image/features.svg
-    bgImage: https://theme-hope-assets.vuejs.press/bg/1-light.svg
-    bgImageDark: https://theme-hope-assets.vuejs.press/bg/1-dark.svg
+    bgImage: https://img.fxss.work/bg3-light.svg
+    bgImageDark: https://img.fxss.work/bg3-dark.svg
     features:
       - title: 注册、登录、忘记密码
         icon: fingerprint
@@ -74,13 +74,18 @@ highlights:
         
       - title: 浏览量
         icon: chalkboard
-        details: 根据页面接口请求的页面浏览量，更精准查看页面浏览量
+        details: 根据请求页面内容的接口进行统计，更精准查看页面浏览量
         link: ./use/view.md
+        
+      - title: 适配对接
+        icon: plug-circle-check
+        details: 页面访问用户信息以及接口访问获取用户信息
+        link: ./use/abutment.md
 
   - header: 演示示例
     description: 常用功能的演示示例。
-    bgImage: https://theme-hope-assets.vuejs.press/bg/5-light.svg
-    bgImageDark: https://theme-hope-assets.vuejs.press/bg/5-dark.svg
+    bgImage: https://img.fxss.work/bg4-light.svg
+    bgImageDark: https://img.fxss.work/bg4-dark.svg
     features:
 
       - title: 增删改查
