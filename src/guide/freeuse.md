@@ -3,7 +3,7 @@ title: 免费试用
 icon: pen-to-square
 order: 2
 isOriginal: true
-date: 2023-06-09
+date: 2023-06-24
 ---
 
 在 [泛积木-低代码 注册页面](https://jimu.fxss.work/#/register) 先注册，注册之后平台会收到注册邮件，审批通过之后会以邮件方式进行告知，之后你就可以在 [泛积木-低代码](https://jimu.fxss.work/) 平台上体验功能，并且可以自己编辑页面、编辑页面权限，体验可视化页面编辑器。
