@@ -76,6 +76,11 @@ highlights:
         icon: chalkboard
         details: 根据请求页面内容的接口进行统计，更精准查看页面浏览量
         link: ./use/view.md
+
+      - title: 查看日志
+        icon: newspaper
+        details: 网站运行时会记录多种日志，方便快速定位问题，同时提供在网站内页面的形式查看日志
+        link: ./use/log.md
         
       - title: 适配对接
         icon: plug-circle-check
