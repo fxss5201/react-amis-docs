@@ -3,7 +3,7 @@ title: 用户管理
 icon: users-gear
 order: 3
 isOriginal: true
-date: 2023-06-24
+date: 2023-07-01
 ---
 
 在用户管理方式提供 用户中心 -> 个人中心、用户列表。

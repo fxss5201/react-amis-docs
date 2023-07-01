@@ -3,7 +3,7 @@ title: 查看日志
 icon: newspaper
 order: 8
 isOriginal: true
-date: 2023-06-30
+date: 2023-07-01
 ---
 
 网站在运行时会产生4种日志：

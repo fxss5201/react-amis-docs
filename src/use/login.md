@@ -3,7 +3,7 @@ title: 注册、登录、忘记密码
 icon: fingerprint
 order: 2
 isOriginal: true
-date: 2023-06-24
+date: 2023-07-01
 ---
 
 网站自带注册、登录、忘记密码的功能，注册之后，管理员会受到邮件通知，当审批通过之后，也会以邮件发送注册人。

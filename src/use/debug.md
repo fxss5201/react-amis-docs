@@ -3,7 +3,7 @@ title: debug模式
 icon: bug
 order: 6
 isOriginal: true
-date: 2023-06-24
+date: 2023-07-01
 ---
 
 ## debug模式功能
