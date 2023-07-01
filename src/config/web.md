@@ -3,7 +3,7 @@ title: 网站配置
 icon: tv
 order: 1
 isOriginal: true
-date: 2023-06-24
+date: 2023-07-01
 ---
 
 网站配置除了下订单时的基本配置，还有一些内容可以自行配置`config.js`：

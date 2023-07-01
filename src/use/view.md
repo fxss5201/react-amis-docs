@@ -3,7 +3,7 @@ title: 浏览量
 icon: chalkboard
 order: 7
 isOriginal: true
-date: 2023-06-24
+date: 2023-07-01
 ---
 
 默认提供的浏览量查看页面，是根据请求页面结构的接口做统计的，更为精确。

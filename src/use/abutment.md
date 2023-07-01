@@ -3,7 +3,7 @@ title: 适配对接
 icon: plug-circle-check
 order: 9
 isOriginal: true
-date: 2023-06-24
+date: 2023-07-01
 ---
 
 和本框架对接的时候，有以下几种方式可以获取当前用户信息：

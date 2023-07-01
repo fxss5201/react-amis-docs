@@ -3,7 +3,7 @@ title: 邮箱配置
 icon: envelope
 order: 4
 isOriginal: true
-date: 2023-06-24
+date: 2023-07-01
 ---
 
 泛积木-低代码的验证码、注册消息通知、用户审批通过等消息通知均采用邮箱发送，采用的 [SMTP](https://wx.mail.qq.com/list/readtemplate?name=app_intro.html#/agreement/authorizationCode) 服务，下面列举在QQ邮箱中如何启用配置。
