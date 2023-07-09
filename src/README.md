@@ -8,7 +8,7 @@ bgImageDark: https://img.fxss.work/bg1-dark.svg
 bgImageStyle:
   background-attachment: fixed
 heroText: 泛积木-低代码
-tagline: 可以广泛使用的积木框架，可以广泛适用的低代码平台。
+tagline: 可以广泛使用的积木框架，可以广泛适用的低代码平台。邮箱：723107234@qq.com 电话：18217339587（微信同号）
 actions:
   - text: 使用指南
     icon: book
@@ -103,5 +103,9 @@ highlights:
         details: 增删改查功能实现及详情代码
         link: ./demo/table.md
 ---
+
+联系方式：
+邮箱：723107234@qq.com
+电话：18217339587（微信同号）
 
 本文档使用的是 [Vuepress Theme Hope](https://vuepress-theme-hope.github.io/v2/zh/)。
