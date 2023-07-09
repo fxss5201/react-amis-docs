@@ -1,7 +1,7 @@
 ---
 title: 适配对接
 icon: plug-circle-check
-order: 9
+order: 10
 isOriginal: true
 date: 2023-07-01
 ---
