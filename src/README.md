@@ -81,6 +81,11 @@ highlights:
         icon: newspaper
         details: 网站运行时会记录多种日志，方便快速定位问题，同时提供在网站内页面的形式查看日志
         link: ./use/log.md
+
+      - title: 文件管理
+        icon: folder-open
+        details: 上传图片、上传文件、创建文件夹目录、遍历文件夹中的文件和目录、删除文件夹目录和文件等
+        link: ./use/fileManagement.md
         
       - title: 适配对接
         icon: plug-circle-check
