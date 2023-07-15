@@ -22,6 +22,12 @@ export default sidebar({
       children: "structure",
     },
     {
+      text: "常见问题",
+      icon: "clipboard-question",
+      prefix: "question/",
+      children: "structure",
+    },
+    {
       text: "演示示例",
       icon: "laptop-code",
       prefix: "demo/",
