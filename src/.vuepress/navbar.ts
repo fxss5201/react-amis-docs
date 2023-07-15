@@ -23,6 +23,11 @@ export default navbar([
     link: "/demo/",
   },
   {
+    text: "常见问题",
+    icon: "clipboard-question",
+    link: "/question/",
+  },
+  {
     text: "授权",
     icon: "key",
     link: "https://jimu.fxss.work",
