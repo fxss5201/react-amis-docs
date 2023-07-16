@@ -44,7 +44,7 @@ highlights:
 
       - title: 权限使用
         icon: unlock
-        details: 管理系统的权限配置
+        details: 管理系统的权限配置，且支持将权限做到按钮级别
         link: ./use/author.md
 
       - title: 页面开发
