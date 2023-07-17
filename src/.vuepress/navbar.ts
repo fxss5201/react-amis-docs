@@ -18,14 +18,14 @@ export default navbar([
     link: "/config/",
   },
   {
-    text: "演示示例",
-    icon: "laptop-code",
-    link: "/demo/",
-  },
-  {
     text: "常见问题",
     icon: "clipboard-question",
     link: "/question/",
+  },
+  {
+    text: "演示示例",
+    icon: "laptop-code",
+    link: "/demo/",
   },
   {
     text: "授权",
