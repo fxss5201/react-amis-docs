@@ -8,14 +8,14 @@ export default navbar([
     link: "/guide/",
   },
   {
-    text: "使用指引",
-    icon: "hand-point-right",
-    link: "/use/",
-  },
-  {
     text: "配置",
     icon: "gears",
     link: "/config/",
+  },
+  {
+    text: "API接口",
+    icon: "retweet",
+    link: "/api/",
   },
   {
     text: "常见问题",

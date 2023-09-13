@@ -22,6 +22,12 @@ export default sidebar({
       children: "structure",
     },
     {
+      text: "API接口",
+      icon: "retweet",
+      prefix: "api/",
+      children: "structure",
+    },
+    {
       text: "常见问题",
       icon: "clipboard-question",
       prefix: "question/",
