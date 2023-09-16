@@ -13,9 +13,10 @@ export default navbar([
     link: "/config/",
   },
   {
-    text: "API接口",
+    text: "扩展",
     icon: "retweet",
-    link: "/api/",
+    link: "/extend/",
+    children: ["/extend/filter", "/extend/api"],
   },
   {
     text: "常见问题",

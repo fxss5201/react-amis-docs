@@ -22,9 +22,9 @@ export default sidebar({
       children: "structure",
     },
     {
-      text: "API接口",
+      text: "扩展",
       icon: "retweet",
-      prefix: "api/",
+      prefix: "extend/",
       children: "structure",
     },
     {
