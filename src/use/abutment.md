@@ -16,13 +16,13 @@ date: 2023-07-01
 
 ``` js
 {
-  id: "用户id",
-  email: "邮箱",
-  phone: "手机号",
-  name: "用户昵称 || 邮箱 || 手机号",
-  header: "头像",
-  accessId: "权限id",
-  isAdmin: "是否是管理员"
+  id: "用户id", // Number
+  email: "邮箱", // String
+  phone: "手机号", // String
+  name: "用户昵称 || 邮箱 || 手机号", // String
+  header: "头像", // String
+  accessId: "权限id", // Number
+  isAdmin: "是否是管理员" // Boolean, true: 是, false: 否
 }
 ```
 
@@ -30,37 +30,37 @@ date: 2023-07-01
 
 ### 接口获取用户信息
 
-不论是前端页面还是后端接口都可以通过访问 `https://xxx.xxx.xx/codeApi/getUserInfoApi` （域名为后端接口部署的域名）接口获得当前用户消息：
+不论是前端页面还是后端接口都可以通过 `post` 访问 `https://xxx.xxx.xx/codeApi/getUserInfoApi` （域名为后端接口部署的域名）接口获得当前用户消息：
 
 ``` js
 {
-  id: "用户id",
-  email: "邮箱",
-  phone: "手机号",
-  name: "用户昵称 || 邮箱 || 手机号",
-  header: "头像",
-  accessId: "权限id",
-  enable: "当前账户是否可用",
-  isAdmin: "是否是管理员"
+  id: "用户id", // Number
+  email: "邮箱", // String
+  phone: "手机号", // String
+  name: "用户昵称 || 邮箱 || 手机号", // String
+  header: "头像", // String
+  accessId: "权限id", // Number
+  enable: "当前账户是否可用", // Number，0: 禁用, 1: 启用
+  isAdmin: "是否是管理员" // Boolean, true: 是, false: 否
 }
 ```
 
 ### 接口获取某个用户的信息
 
-`https://xxx.xxx.xx/codeApi/getUserInfoApi` （域名为后端接口部署的域名）接口可以指定获取某个用户消息：
+ `post` `https://xxx.xxx.xx/codeApi/getUserInfoApi` （域名为后端接口部署的域名）接口可以指定获取某个用户消息：
 
-参数：`{ userId: 用户ID，可选输入，未输入时默认为当前用户 }`，返回结果如下：
+参数 `body` ：`{ userId: 用户ID，可选输入，未输入时默认为当前用户 }`，返回结果如下：
 
 ``` js
 {
-  id: "用户id",
-  email: "邮箱",
-  phone: "手机号",
-  name: "用户昵称 || 邮箱 || 手机号",
-  header: "头像",
-  accessId: "权限id",
-  enable: "当前账户是否可用",
-  isAdmin: "是否是管理员"
+  id: "用户id", // Number
+  email: "邮箱", // String
+  phone: "手机号", // String
+  name: "用户昵称 || 邮箱 || 手机号", // String
+  header: "头像", // String
+  accessId: "权限id", // Number
+  enable: "当前账户是否可用", // Number，0: 禁用, 1: 启用
+  isAdmin: "是否是管理员" // Boolean, true: 是, false: 否
 }
 ```
 
@@ -72,9 +72,9 @@ date: 2023-07-01
 
 ``` js
 {
-  view: "访问权限",
-  editor: "编辑权限",
-  delete: "删除权限"
+  view: "访问权限", // Boolean, true: 拥有权限, false: 未拥有权限
+  editor: "编辑权限", // Boolean, true: 拥有权限, false: 未拥有权限
+  delete: "删除权限" // Boolean, true: 拥有权限, false: 未拥有权限
 }
 ```
 
@@ -82,26 +82,28 @@ date: 2023-07-01
 
 ### 接口获取页面信息及权限信息
 
-可以在前端、后端调接口 `https://xxx.xxx.xx/codeApi/getPageInfoApi`（域名为后端接口部署的域名） 获取到页面的基本信息和权限信息：
+可以在前端、后端调接口 `post` `https://xxx.xxx.xx/codeApi/getPageInfoApi`（域名为后端接口部署的域名） 获取到页面的基本信息和权限信息：
 
-参数为：`{ key: 页面标识，必须输入, userId: 用户ID，可选输入，未输入时默认为当前用户 }`，返回的结果为：
+参数为 `body` ：`{ key: 页面标识，必须输入, userId: 用户ID，可选输入，未输入时默认为当前用户 }`，返回的结果为：
 
 ``` js
 {
-  id: "页面id",
-  label: "页面名称",
-  to: "页面链接",
-  key: "页面标识",
-  folder: "页面类型， 0：单页面，1：目录",
-  accessIds: "页面访问权限，字符串形式 '1,2,3'",
-  editorAccessIds: "页面编辑权限，字符串形式 '1,2,3'",
-  deleteAccessIds: "页面删除权限，字符串形式 '1,2,3'",
-  enable: "页面是否启用，0：禁用，1：启用",
-  version: "页面版本",
+  id: "页面id", // Number
+  label: "页面名称", // String
+  to: "页面链接", // String
+  key: "页面标识", // String
+  folder: "页面类型", // Number, 0: 单页面, 1: 目录
+  accessIds: "页面访问权限，字符串形式 '1,2,3'", // String
+  editorAccessIds: "页面编辑权限，字符串形式 '1,2,3'", // String
+  deleteAccessIds: "页面删除权限，字符串形式 '1,2,3'", // String
+  enable: "页面是否启用", // Number，0: 禁用, 1: 启用
+  version: "页面版本", // String
   pageAccess: { // 针对某个用户的权限（默认为当前用户）
-    view: "访问权限",
-    editor: "编辑权限",
-    delete: "删除权限"
+    view: "访问权限", // Boolean, true: 拥有权限, false: 未拥有权限
+    editor: "编辑权限", // Boolean, true: 拥有权限, false: 未拥有权限
+    delete: "删除权限" // Boolean, true: 拥有权限, false: 未拥有权限
   }
 }
 ```
+
+对接的其他接口可查看 [API接口](./../api/README.md)。

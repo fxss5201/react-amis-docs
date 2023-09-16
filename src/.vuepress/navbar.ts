@@ -8,14 +8,15 @@ export default navbar([
     link: "/guide/",
   },
   {
-    text: "使用指引",
-    icon: "hand-point-right",
-    link: "/use/",
-  },
-  {
     text: "配置",
     icon: "gears",
     link: "/config/",
+  },
+  {
+    text: "扩展",
+    icon: "retweet",
+    link: "/extend/",
+    children: ["/extend/filter", "/extend/api"],
   },
   {
     text: "常见问题",
