@@ -6,9 +6,9 @@ date: 2023-09-16
 
 [展示示例](https://jimu.fxss.work/#/outside/arrayRegisterFilter) 。
 
-**注意：过滤器参数中不能包含空格，如果过滤器参数使用数据域中的数组数据，需要使用 `toJson` 转成数组。**
+**注意：过滤器参数中不能包含空格，过滤器参数默认是字符串，如果是从数据域中取值，可以使用 `${}`，默认取出来的值会是字符串形式的，可以使用 `toJson` 转化为对应的格式（Array、Object），当前函数只能传字符串，会在内部使用 `window.eval` 执行（如果有更好的方式，可以提出）。**
 
-## f-chunk
+## f_chunk
 
 ### 说明
 
@@ -31,13 +31,13 @@ date: 2023-09-16
   "array": ["a", "b", "c", "d"]
 },
 ...
-"tpl": "${array|json}: ${array|f-chunk|json}", // [ "a", "b", "c", "d" ]: [ [ "a" ], [ "b" ], [ "c" ], [ "d" ] ]
-"tpl": "${array|json}: ${array|f-chunk:2|json}", // [ "a", "b", "c", "d" ]: [ [ "a", "b" ], [ "c", "d" ] ]
-"tpl": "${array|json}: ${array|f-chunk:3|json}", // [ "a", "b", "c", "d" ]: [ [ "a", "b", "c" ], [ "d" ] ]
+"tpl": "${array|json}: ${array|f_chunk|json}", // [ "a", "b", "c", "d" ]: [ [ "a" ], [ "b" ], [ "c" ], [ "d" ] ]
+"tpl": "${array|json}: ${array|f_chunk:2|json}", // [ "a", "b", "c", "d" ]: [ [ "a", "b" ], [ "c", "d" ] ]
+"tpl": "${array|json}: ${array|f_chunk:3|json}", // [ "a", "b", "c", "d" ]: [ [ "a", "b", "c" ], [ "d" ] ]
 ...
 ```
 
-## f-compact
+## f_compact
 
 ### 说明
 
@@ -59,11 +59,11 @@ date: 2023-09-16
   "array": [0, 1, false, 2, '', 3]
 },
 ...
-"tpl": "${array|json}: ${array|f-compact|json}", // [ 0, 1, false, 2, "", 3 ]: [ 1, 2, 3 ]
+"tpl": "${array|json}: ${array|f_compact|json}", // [ 0, 1, false, 2, "", 3 ]: [ 1, 2, 3 ]
 ...
 ```
 
-## f-concat
+## f_concat
 
 ### 说明
 
@@ -87,12 +87,12 @@ date: 2023-09-16
   "array1": [2, 3]
 },
 ...
-"tpl": "${array|json}: ${array|f-concat:2:[3]:[[4]]|json}", // [ 1 ]: [ 1, 2, [ 3 ], [ [ 4 ] ] ]
-"tpl": "${array|json}: ${array|f-concat:${array1|toJson}|json}", // [ 1 ]: [ 1, 2, 3 ]
+"tpl": "${array|json}: ${array|f_concat:2:[3]:[[4]]|json}", // [ 1 ]: [ 1, 2, [ 3 ], [ [ 4 ] ] ]
+"tpl": "${array|json}: ${array|f_concat:${array1|toJson}|json}", // [ 1 ]: [ 1, 2, 3 ]
 ...
 ```
 
-## f-difference
+## f_difference
 
 ### 说明
 
@@ -117,16 +117,16 @@ date: 2023-09-16
   "array2": [4]
 },
 ...
-"tpl": "${array|json}: ${array|f-difference:[2,4]|json}", // [ 1, 2, 3, 4, 5 ]: [ 1, 3, 5 ]
-"tpl": "${array|json}: ${array|f-difference:${array1|toJson}:${array2|toJson}|json}", // [ 1, 2, 3, 4, 5 ]: [ 1, 5 ]
+"tpl": "${array|json}: ${array|f_difference:[2,4]|json}", // [ 1, 2, 3, 4, 5 ]: [ 1, 3, 5 ]
+"tpl": "${array|json}: ${array|f_difference:${array1|toJson}:${array2|toJson}|json}", // [ 1, 2, 3, 4, 5 ]: [ 1, 5 ]
 ...
 ```
 
-## f-differenceBy
+## f_differenceBy
 
 ### 说明
 
-这个过滤器类似`f-difference`` ，除了它接受一个 `iteratee`` （注：迭代器）， 调用 `array` 和 `values` 中的每个元素以产生比较的标准。 结果值是从第一数组中选择。`iteratee` 会调用一个参数：`(value)`。（注：首先使用迭代器分别迭代 `array` 和 `values` 中的每个元素，返回的值作为比较值）。
+这个过滤器类似`f_difference` ，除了它接受一个 `iteratee` （注：迭代器）， 调用 `array` 和 `values` 中的每个元素以产生比较的标准。 结果值是从第一数组中选择。`iteratee` 会调用一个参数：`(value)`。（注：首先使用迭代器分别迭代 `array` 和 `values` 中的每个元素，返回的值作为比较值）。
 
 ### 参数
 
@@ -167,13 +167,14 @@ date: 2023-09-16
   ]
 },
 ...
-"tpl": "${array|json}: ${array|f-differenceBy:${array1|toJson}:'Math.floor'|json}", // [ 3.1, 2.2, 1.3 ]: [ 3.1, 1.3 ]
-"tpl": "${array|json}: ${array|f-differenceBy:${array1|toJson}:'(val)=>Math.ceil(val)'|json}", // [ 3.1, 2.2, 1.3 ]: [ 3.1, 1.3 ]
-"tpl": "${array2|json}: ${array2|f-differenceBy:${array3|toJson}:'(val)=>val.x'|json}", // [ { "x": 2 }, { "x": 1 } ]: [ { "x": 2 } ]
+"tpl": "${array|json}: ${array|f_differenceBy:${array1|toJson}:'Math.floor'|json}", // [ 3.1, 2.2, 1.3 ]: [ 3.1, 1.3 ]
+"tpl": "${array|json}: ${array|f_differenceBy:${array1|toJson}:'(val)=>Math.ceil(val)'|json}", // [ 3.1, 2.2, 1.3 ]: [ 3.1, 1.3 ]
+"tpl": "${array2|json}: ${array2|f_differenceBy:${array3|toJson}:'(val)=>val.x'|json}", // [ { "x": 2 }, { "x": 1 } ]: [ { "x": 2 } ]
+"tpl": "${array2|json}: ${array2|f_differenceBy:${array3|toJson}:x|json}", // [ { "x": 2 }, { "x": 1 } ]: [ { "x": 2 } ]
 ...
 ```
 
-## f-drop
+## f_drop
 
 ### 说明
 
@@ -200,12 +201,12 @@ date: 2023-09-16
   ]
 },
 ...
-"tpl": "${[1,2,3]|json}: ${[1,2,3]|f-drop|json}", // [ 1, 2, 3 ]: [ 2, 3 ]
-"tpl": "${array|json}: ${array|f-drop:2|json}", // [ 1, 2, 3 ]: [ 3 ]
+"tpl": "${[1,2,3]|json}: ${[1,2,3]|f_drop|json}", // [ 1, 2, 3 ]: [ 2, 3 ]
+"tpl": "${array|json}: ${array|f_drop:2|json}", // [ 1, 2, 3 ]: [ 3 ]
 ...
 ```
 
-## f-dropRight
+## f_dropRight
 
 ### 说明
 
@@ -232,12 +233,12 @@ date: 2023-09-16
   ]
 },
 ...
-"tpl": "${[1,2,3]|json}: ${[1,2,3]|f-dropRight|json}", // [ 1, 2, 3 ]: [ 1, 2 ]
-"tpl": "${array|json}: ${array|f-dropRight:2|json}", // [ 1, 2, 3 ]: [ 1 ]
+"tpl": "${[1,2,3]|json}: ${[1,2,3]|f_dropRight|json}", // [ 1, 2, 3 ]: [ 1, 2 ]
+"tpl": "${array|json}: ${array|f_dropRight:2|json}", // [ 1, 2, 3 ]: [ 1 ]
 ...
 ```
 
-## f-dropRightWhile
+## f_dropRightWhile
 
 ### 说明
 
@@ -261,14 +262,21 @@ date: 2023-09-16
     { "user": "barney",  "active": true },
     { "user": "fred",    "active": false },
     { "user": "pebbles", "active": false }
+  ],
+  "array1": [
+    "active",
+    false
   ]
 },
 ...
-"tpl": "${array|json}: ${array|f-dropRightWhile:'(val)=>!val.active'|json}", // [ { "user": "barney", "active": true }, { "user": "fred", "active": false }, { "user": "pebbles", "active": false } ]: [ { "user": "barney", "active": true } ]
+"tpl": "${array|json}: ${array|f_dropRightWhile:'(val)=>!val.active'|json}", // [ { "user": "barney", "active": true }, { "user": "fred", "active": false }, { "user": "pebbles", "active": false } ]: [ { "user": "barney", "active": true } ]
+"tpl": "${array|json}: ${array|f_dropRightWhile:${array|nth:2|toJson}|json}", // [ { "user": "barney", "active": true }, { "user": "fred", "active": false }, { "user": "pebbles", "active": false } ]: [ { "user": "barney", "active": true }, { "user": "fred", "active": false } ]
+"tpl": "${array|json}: ${array|f_dropRightWhile:${array1|toJson}|json}", // [ { "user": "barney", "active": true }, { "user": "fred", "active": false }, { "user": "pebbles", "active": false } ]: [ { "user": "barney", "active": true } ]
+"tpl": "${array|json}: ${array|f_dropRightWhile:active|json}", // [ { "user": "barney", "active": true }, { "user": "fred", "active": false }, { "user": "pebbles", "active": false } ]: [ { "user": "barney", "active": true }, { "user": "fred", "active": false }, { "user": "pebbles", "active": false } ]
 ...
 ```
 
-## f-dropWhile
+## f_dropWhile
 
 ### 说明
 
@@ -289,17 +297,37 @@ date: 2023-09-16
 ...
 "data": {
   "array": [
-    { "user": "barney",  "active": true },
-    { "user": "fred",    "active": false },
-    { "user": "pebbles", "active": false }
+    {
+      "user": "barney",
+      "active": false
+    },
+    {
+      "user": "fred",
+      "active": false
+    },
+    {
+      "user": "pebbles",
+      "active": true
+    }
+  ],
+  "obj1": {
+    "user": "barney",
+    "active": false
+  },
+  "array1": [
+    "active",
+    false
   ]
 },
 ...
-"tpl": "${array|json}: ${array|f-dropRightWhile:'(val)=>val.active'|json}", // [ { "user": "barney", "active": true }, { "user": "fred", "active": false }, { "user": "pebbles", "active": false } ]: [ { "user": "fred", "active": false }, { "user": "pebbles", "active": false } ]
+"tpl": "${array|json}: ${array|f_dropWhile:'(val)=>!val.active'|json}", // [ { "user": "barney", "active": false }, { "user": "fred", "active": false }, { "user": "pebbles", "active": true } ]: [ { "user": "pebbles", "active": true } ]
+"tpl": "${array|json}: ${array|f_dropWhile:${obj1|toJson}|json}", // [ { "user": "barney", "active": false }, { "user": "fred", "active": false }, { "user": "pebbles", "active": true } ]: [ { "user": "fred", "active": false }, { "user": "pebbles", "active": true } ]
+"tpl": "${array|json}: ${array|f_dropWhile:${array1|toJson}|json}", // [ { "user": "barney", "active": false }, { "user": "fred", "active": false }, { "user": "pebbles", "active": true } ]: [ { "user": "pebbles", "active": true } ]
+"tpl": "${array|json}: ${array|f_dropWhile:active|json}", // [ { "user": "barney", "active": false }, { "user": "fred", "active": false }, { "user": "pebbles", "active": true } ]: [ { "user": "barney", "active": false }, { "user": "fred", "active": false }, { "user": "pebbles", "active": true } ]
 ...
 ```
 
-## f-fill
+## f_fill
 
 ### 说明
 
@@ -326,8 +354,8 @@ date: 2023-09-16
   "array": [1, 2, 3]
 },
 ...
-"tpl": "${array|json}: ${array|f-fill:'a'|json}", // [ 1, 2, 3 ]: [ "a", "a", "a" ]
+"tpl": "${array|json}: ${array|f_fill:a|json}", // [ 1, 2, 3 ]: [ "a", "a", "a" ]
 "tpl": "${array|json}", // [ "a", "a", "a" ]
-"tpl": "${[4, 6, 8, 10]|json}: ${[4, 6, 8, 10]|f-fill:'*':1:3|json}", // [ 4, 6, 8, 10 ]: [ 4, "*", "*", 10 ]
+"tpl": "${[4, 6, 8, 10]|json}: ${[4, 6, 8, 10]|f_fill:*:1:3|json}", // [ 4, 6, 8, 10 ]: [ 4, "*", "*", 10 ]
 ...
 ```
