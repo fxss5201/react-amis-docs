@@ -4,9 +4,9 @@ isOriginal: true
 date: 2023-09-16
 ---
 
-[展示示例](https://jimu.fxss.work/#/outside/arrayRegisterFilter) 。
+[展示示例](https://jimu.fxss.work/#/outside/arrayFilter) 。
 
-**注意：过滤器参数中不能包含空格，过滤器参数默认是字符串，如果是从数据域中取值，可以使用 `${}`，默认取出来的值会是字符串形式的，可以使用 `toJson` 转化为对应的格式（Array、Object），当前函数只能传字符串，会在内部使用 `window.eval` 执行（如果有更好的方式，可以提出）。**
+**注意：过滤器参数中不能包含空格，过滤器参数默认是字符串，如果是从数据域中取值，可以使用 `${}`，默认取出来的值会是字符串形式的，可以使用 `toJson` 转化为对应的格式（Array、Object），当前函数只能传字符串 `(val)=>val`。**
 
 ## f_chunk
 
