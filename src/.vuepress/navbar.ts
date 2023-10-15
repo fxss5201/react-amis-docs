@@ -8,6 +8,11 @@ export default navbar([
     link: "/guide/",
   },
   {
+    text: "使用指引",
+    icon: "hand-point-right",
+    link: "/use/",
+  },
+  {
     text: "配置",
     icon: "gears",
     link: "/config/",

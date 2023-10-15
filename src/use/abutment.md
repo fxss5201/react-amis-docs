@@ -64,6 +64,19 @@ date: 2023-07-01
 }
 ```
 
+## 页面信息
+
+所有页面都可以直接在 [数据链](https://aisuda.bce.baidu.com/amis/zh-CN/docs/concepts/datascope-and-datachain#%E6%95%B0%E6%8D%AE%E9%93%BE) 上查找到当前页面的信息 `pageInfo` :
+
+``` js
+{
+  id: "页面id", // Number
+  key: "页面标识key", // String
+}
+```
+
+可以在页面中 `${pageInfo.x}` (x 代表上述中的 key(`id/key`) 值) 使用。
+
 ## 权限控制
 
 ### 页面中的权限信息
@@ -84,7 +97,7 @@ date: 2023-07-01
 
 可以在前端、后端调接口 `post` `https://xxx.xxx.xx/codeApi/getPageInfoApi`（域名为后端接口部署的域名） 获取到页面的基本信息和权限信息：
 
-参数为 `body` ：`{ key: 页面标识，必须输入, userId: 用户ID，可选输入，未输入时默认为当前用户 }`，返回的结果为：
+参数为 `body` ：`{ key: 页面标识，必须输入，可以在接口中从页面参数传递 ${pageInfo.key} , userId: 用户ID，可选输入，未输入时则请求接口的 headers 必须包含当前用户的 Authorization`，返回的结果为：
 
 ``` js
 {
@@ -107,3 +120,9 @@ date: 2023-07-01
 ```
 
 对接的其他接口可查看 [API接口](./../api/README.md)。
+
+## 系统公共变量
+
+在系统配置中配置的并且启用的 公共变量 所有页面都可以直接在 [数据链](https://aisuda.bce.baidu.com/amis/zh-CN/docs/concepts/datascope-and-datachain#%E6%95%B0%E6%8D%AE%E9%93%BE) 上查找到 `configMap` ，可以在页面中 `${configMap.x}` (x 代表 key 值) 使用。
+
+更详细的使用查看 [系统配置](./configMap.md)。

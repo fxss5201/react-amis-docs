@@ -86,11 +86,31 @@ highlights:
         icon: folder-open
         details: 上传图片、上传文件、创建文件夹目录、遍历文件夹中的文件和目录、删除文件夹目录和文件等
         link: ./use/fileManagement.md
-        
+
       - title: 适配对接
         icon: plug-circle-check
         details: 页面访问用户信息以及接口访问获取用户信息
         link: ./use/abutment.md
+        
+      - title: 系统设置
+        icon: gears
+        details: 动态设置系统公共变量，在所有页面的数据域内可获取公共变量
+        link: ./use/configMap.md
+          
+      - title: mock数据
+        icon: lemon
+        details: 支持增删改查mock数据，编辑mock数据，可以在系统所有页面内查询对应的数据值
+        link: ./use/mock.md
+          
+      - title: 数据字典
+        icon: book
+        details: 支持增删改查字典数据，编辑字典数据，可以在系统所有页面内查询对应的字典值
+        link: ./use/dictionary.md
+
+      - title: CRUD增删改查生成器
+        icon: table
+        details: 通过配置生成增删改查（会直接生成数据表+页面，并支持配置页面内的搜索内容）
+        link: ./use/crud.md
 
   - header: 演示示例
     description: 常用功能的演示示例。
