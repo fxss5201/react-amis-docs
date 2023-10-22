@@ -4,7 +4,7 @@ import { cut } from "nodejs-jieba";
 import { searchProPlugin } from "vuepress-plugin-search-pro";
 
 export default defineUserConfig({
-  base: "/react-amis-docs/",
+  base: "/",
 
   lang: "zh-CN",
   title: "泛积木-低代码",
@@ -16,7 +16,7 @@ export default defineUserConfig({
       `var _hmt = _hmt || [];
       (function() {
         var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?31a3c177589348e7ac3e6bbf638624d7";
+        hm.src = "https://hm.baidu.com/hm.js?9465de436a3cfb6d7b1a2fa80fe89e36";
         var s = document.getElementsByTagName("script")[0]; 
         s.parentNode.insertBefore(hm, s);
       })();`

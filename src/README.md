@@ -26,6 +26,9 @@ highlights:
     bgImageDark: https://img.fxss.work/bg2-dark.svg
     highlights:
       - title: 前端页面只需部署一次，后续开发及上线都在网站内，极速上线。
+      - title: 一套代码支持 开发、测试、正式 3重环境。
+      - title: 支持 开发、测试 环境切换版本。
+      - title: 支持版本查看、发布版本、版本历史、代码对比。
 
   - header: 功能项
     image: /assets/image/features.svg
@@ -56,11 +59,6 @@ highlights:
         icon: copy
         details: 通过拖拽配置、所见即所得
         link: ./use/page.html#可视化页面编辑器
-
-      - title: 代码比对
-        icon: code-compare
-        details: 页面多版本并行开发时，通过代码比对进行代码更新
-        link: ./use/page.html#页面版本
 
       - title: 网站配置
         icon: tv
@@ -111,6 +109,31 @@ highlights:
         icon: table
         details: 通过配置生成增删改查（会直接生成数据表+页面，并支持配置页面内的搜索内容）
         link: ./use/crud.md
+
+      - title: 代码比对
+        icon: code-compare
+        details: 页面多版本并行开发时，通过代码比对进行代码更新
+        link: ./use/codeCompare.md
+
+      - title: 版本设置
+        icon: code-branch
+        details: 设置本地版本，用于开发环境和测试环境的版本控制
+        link: ./use/versionSet.md
+
+      - title: 页面版本
+        icon: timeline
+        details: 用于查看页面的所有版本（类似于查看所有代码分支）
+        link: ./use/pageVersion.md
+
+      - title: 页面发版
+        icon: tag
+        details: 用于控制页面版本发布
+        link: ./use/pageRelease.md
+
+      - title: 发版历史
+        icon: tags
+        details: 用于查看发布历史
+        link: ./use/releaseHistory.md
 
   - header: 演示示例
     description: 常用功能的演示示例。
