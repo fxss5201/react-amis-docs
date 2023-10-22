@@ -25,7 +25,7 @@ date: 2023-10-22
 ```json
 "api": {
   "method": "get",
-  "url": "${pageInfo.isProd ? (pageInfo.isTest ? '测试环境接口地址' : '开发环境接口地址') : '正式环境接口地址'}"
+  "url": "${pageInfo.isProd ? '正式环境接口地址' : (pageInfo.isTest ? '测试环境接口地址' : '开发环境接口地址')}"
 },
 ```
 
