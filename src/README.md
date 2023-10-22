@@ -20,7 +20,7 @@ actions:
     link: https://jimu.fxss.work/
 
 highlights:
-  - header: 一次部署
+  - header: 一次部署，多种环境，快速上线
     image: /assets/image/box.svg
     bgImage: https://img.fxss.work/bg2-light.svg
     bgImageDark: https://img.fxss.work/bg2-dark.svg
@@ -49,6 +49,11 @@ highlights:
         icon: unlock
         details: 管理系统的权限配置，且支持将权限做到按钮级别
         link: ./use/author.md
+
+      - title: 环境区分
+        icon: circle-half-stroke
+        details: 用于区分 开发、测试、正式 环境，调用不同环境的接口地址
+        link: ./use/environment.md
 
       - title: 页面开发
         icon: file
