@@ -41,6 +41,64 @@ date: 2023-10-15
 9. 对应数据字典：可选择系统中的数据字典作为下拉选择项，并且页面中会直接引用对应数据字典值；
 10. 对应数据：**必须配置为json数据结构，自行保证结构格式**，用于作为下拉选择项，优先级大于 对应数据字典。
 
+对应数据一般用于[下拉框](https://aisuda.bce.baidu.com/amis/zh-CN/components/form/options)，为了方便使用，其`labelField`选项显示字段为`label`，`valueField`选项值字段为`value`，所以以如下结构是最方便使用的：
+
+```json
+[
+  {
+    "label": "显示内容",
+    "value": "值"
+  },
+  {
+    "label": "显示内容",
+    "value": "值"
+  },
+  ...
+]
+```
+
+当然如果要使用其他字段的话也是可以的，例如：
+
+```json
+[
+  {
+    "name": "显示内容",
+    "id": "值"
+  },
+  {
+    "name": "显示内容",
+    "id": "值"
+  },
+  ...
+]
+```
+
+则这个时候需要配置 `labelField` 和 `valueField` 字段，例如 [选项标签字段 labelField](https://aisuda.bce.baidu.com/amis/zh-CN/components/form/options#%E9%80%89%E9%A1%B9%E6%A0%87%E7%AD%BE%E5%AD%97%E6%AE%B5-labelfield)，
+
+```json
+{
+  "label": "选项",
+  "type": "select",
+  "name": "select",
+  "labelField": "name",
+  "valueField": "id",
+  "options": [
+    {
+      "name": "A",
+      "id": "a"
+    },
+    {
+      "name": "B",
+      "id": "b"
+    },
+    {
+      "name": "C",
+      "id": "c"
+    }
+  ]
+}
+```
+
 **创建者、创建时间、更新者、更新时间不用添加，系统会自动添加。**
 
 可以通过上下拖拽排序，这里的排序顺序会影响生成的数据表字段的顺序、页面内表格列的顺序、新增编辑表单内的顺序。

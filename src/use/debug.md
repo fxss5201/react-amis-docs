@@ -25,4 +25,4 @@ debug模式是指唤起[调试工具](https://aisuda.bce.baidu.com/amis/zh-CN/do
 
 在链接的[hash](https://developer.mozilla.org/zh-CN/docs/Web/API/Location/hash)（由于[react-router](https://reactrouter.com/en/main)采用的是[createHashRouter](https://reactrouter.com/en/main/routers/create-hash-router#createhashrouter)）中包含`amisDebug=1`字样时，即进入debug模式。
 
-或者点击页面右上角的 **页面编辑** 按钮，进入页面之后，也会打开 debug 模式，可以在使用的查看各个组件的数据域内的数据。
+或者点击页面右上角的 **页面编辑** 按钮，进入页面之后[（测试环境和开发环境环境）](./environment.md)，也会打开 debug 模式，可以使用查看各个组件的数据域内的数据。
