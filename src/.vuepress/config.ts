@@ -20,6 +20,12 @@ export default defineUserConfig({
         var s = document.getElementsByTagName("script")[0]; 
         s.parentNode.insertBefore(hm, s);
       })();`
+    ],
+    [
+      'script', {},
+      `if (document.location.host != "www.fxss.work") {
+        location.href = location.href.replace(document.location.host,'www.fxss.work');
+      }`
     ]
   ],
 
