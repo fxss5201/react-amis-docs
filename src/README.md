@@ -140,6 +140,11 @@ highlights:
         details: 用于查看发布历史
         link: ./use/releaseHistory.md
 
+      - title: 过滤器
+        icon: wand-sparkles
+        details: 基于 lodash 提供多种操作数据的方式
+        link: ./extend/filter.md
+
   - header: 演示示例
     description: 常用功能的演示示例。
     bgImage: https://img.fxss.work/bg4-light.svg
@@ -152,8 +157,8 @@ highlights:
         link: ./demo/table.md
 ---
 
-联系方式：
-邮箱：723107234@qq.com
-电话：18217339587（微信同号）
+<div style="margin-top: 20px">联系方式：</div>
+<div style="margin-top: 15px">1、 邮箱：723107234@qq.com</div>
+<div style="margin-top: 15px">2、 电话：18217339587（微信同号）</div>
 
-本文档使用的是 [Vuepress Theme Hope](https://vuepress-theme-hope.github.io/v2/zh/)。
+本文档使用的是 [Vuepress Theme Hope](https://vuepress-theme-hope.github.io/v2/zh/) 搭建。
