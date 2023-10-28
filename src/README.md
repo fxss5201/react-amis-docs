@@ -8,7 +8,7 @@ bgImageDark: https://img.fxss.work/bg1-dark.svg
 bgImageStyle:
   background-attachment: fixed
 heroText: 泛积木-低代码
-tagline: 可以广泛使用的积木框架，可以广泛适用的低代码平台。邮箱：723107234@qq.com 电话：18217339587（微信同号）
+tagline: 可以广泛使用的积木框架，可以广泛适用的低代码平台。官网地址：https://www.fxss.work/。邮箱：723107234@qq.com 电话：18217339587（微信同号）
 actions:
   - text: 使用指南
     icon: book
@@ -161,4 +161,4 @@ highlights:
 <div style="margin-top: 15px">1、 邮箱：723107234@qq.com</div>
 <div style="margin-top: 15px">2、 电话：18217339587（微信同号）</div>
 
-本文档使用的是 [Vuepress Theme Hope](https://vuepress-theme-hope.github.io/v2/zh/) 搭建。
+官网地址：<https://www.fxss.work/> ，本文档使用的是 [Vuepress Theme Hope](https://theme-hope.vuejs.press/zh/) 搭建。
