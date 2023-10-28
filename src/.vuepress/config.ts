@@ -7,7 +7,7 @@ export default defineUserConfig({
   base: "/react-amis-docs/",
 
   lang: "zh-CN",
-  title: "泛积木-低代码 官网：https://www.fxss.work",
+  title: "泛积木-低代码 官网：www.fxss.work",
   description: "泛积木-低代码：可以广泛使用的积木框架",
 
   head: [
@@ -20,6 +20,12 @@ export default defineUserConfig({
         var s = document.getElementsByTagName("script")[0]; 
         s.parentNode.insertBefore(hm, s);
       })();`
+    ],
+    [
+      'script', {},
+      process.env.NODE_ENV === 'development' ? '' : `if (document.location.host != "fxss5201.github.io") {
+        location.href = location.href.replace(document.location.host,'fxss5201.github.io');
+      }`
     ]
   ],
 

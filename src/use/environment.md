@@ -20,7 +20,7 @@ date: 2023-10-22
 
 根据[请求地址可以配置参数](https://aisuda.bce.baidu.com/amis/zh-CN/docs/types/api#%E9%85%8D%E7%BD%AE%E8%AF%B7%E6%B1%82%E5%9C%B0%E5%9D%80)我们可以按照下面的方式进行不同环境调用不同接口。
 
-我们在项目`config.js`配置[axiosBaseURL](./../config/web.md#axiosbaseurl)，针对不同的环境，我们使用不同的 `key`，然后在页面 json 的配置内我们可以：
+我们在项目`config.js`配置[axiosBaseURL](./../config/web.md#axiosbaseurl)，针对不同的环境，我们使用不同的 链接前缀，然后在页面 json 的配置内我们可以：
 
 ```json
 "api": {
