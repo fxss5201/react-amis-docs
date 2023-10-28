@@ -8,7 +8,7 @@ bgImageDark: https://img.fxss.work/bg1-dark.svg
 bgImageStyle:
   background-attachment: fixed
 heroText: 泛积木-低代码
-tagline: 可以广泛使用的积木框架，可以广泛适用的低代码平台。官网地址：https://www.fxss.work/。邮箱：723107234@qq.com 电话：18217339587（微信同号）
+tagline: 可以广泛使用的积木框架，可以广泛适用的低代码平台。邮箱：723107234@qq.com 电话：18217339587（微信同号）
 actions:
   - text: 使用指南
     icon: book
@@ -19,12 +19,17 @@ actions:
     icon: desktop
     link: https://jimu.fxss.work/
 
+  - text: 使用攻略
+    icon: bolt
+    link: ./guide/strategy.md
+
 highlights:
   - header: 一次部署，多种环境，快速上线
     image: /assets/image/box.svg
     bgImage: https://img.fxss.work/bg2-light.svg
     bgImageDark: https://img.fxss.work/bg2-dark.svg
     highlights:
+      - title: 官网地址：https://www.fxss.work/
       - title: 前端页面只需部署一次，后续开发及上线都在网站内，极速上线。
       - title: 一套代码支持 开发、测试、正式 3重环境。
       - title: 支持 开发、测试 环境切换版本。

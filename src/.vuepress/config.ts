@@ -7,7 +7,7 @@ export default defineUserConfig({
   base: "/",
 
   lang: "zh-CN",
-  title: "泛积木-低代码 官网：https://www.fxss.work",
+  title: "泛积木-低代码 官网：www.fxss.work",
   description: "泛积木-低代码：可以广泛使用的积木框架",
 
   head: [
