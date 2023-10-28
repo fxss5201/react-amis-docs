@@ -23,7 +23,7 @@ export default defineUserConfig({
     ],
     [
       'script', {},
-      `if (document.location.host != "www.fxss.work") {
+      process.env.NODE_ENV === 'development' ? '' : `if (document.location.host != "www.fxss.work") {
         location.href = location.href.replace(document.location.host,'www.fxss.work');
       }`
     ]
