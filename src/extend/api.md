@@ -34,3 +34,35 @@ date: 2023-09-16
 ```
 
 #### 使用方式
+
+在最外层加一层 [service](https://aisuda.bce.baidu.com/amis/zh-CN/components/service) 组件可减少在表格中多次请求
+
+```json
+{
+  "type": "service",
+  "api": {
+    "method": "post",
+    "url": "/codeApi/usersAllList",
+    "messages": {
+    },
+    "responseData": {
+      "usersList": "$$"
+    }
+  },
+  "body": [
+    {
+      "type": "crud",
+      ......
+      "columns": [
+        {
+          "type": "mapping",
+          "label": "创建者",
+          "name": "creatorId",
+          "source": "${usersList.items}",
+          "id": "u:1aa30eda2507"
+        }
+      ]
+    }
+  ]
+}
+```

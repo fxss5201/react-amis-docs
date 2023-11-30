@@ -14,3 +14,7 @@ date: 2023-09-16
 **1. 一般建议使用返回新数据的方式，修改原始数据的方式慎用；**
 
 **2. 只提供有返回数据的方法。**
+
+## [其他自定义过滤器](https://jimu.fxss.work/#/outside/customFilter)
+
+[其他自定义过滤器](https://jimu.fxss.work/#/outside/customFilter) 用于实现一些常用的方法。

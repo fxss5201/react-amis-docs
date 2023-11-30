@@ -126,3 +126,270 @@ date: 2023-07-01
 在系统配置中配置的并且启用的 公共变量 所有页面都可以直接在 [数据链](https://aisuda.bce.baidu.com/amis/zh-CN/docs/concepts/datascope-and-datachain#%E6%95%B0%E6%8D%AE%E9%93%BE) 上查找到 `configMap` ，可以在页面中 `${configMap.x}` (x 代表 key 值) 使用。
 
 更详细的使用查看 [系统配置](./configMap.md)。
+
+## 系统方法
+
+系统除了往数据域注入了常用的变量，也向其内注入了一些常用的方法。这里主要使用的 [事件动作 自定义 JS](https://aisuda.bce.baidu.com/amis/zh-CN/docs/concepts/event-action#%E8%87%AA%E5%AE%9A%E4%B9%89-js)：
+
+通过配置`actionType: 'custom'`实现自定义 JS。JS 中可以访问以下对象和方法：
+
+1. `context`，渲染器上下文；
+2. `doAction()` 动作执行方法，用于调用任何 `actionType` 指定的动作；
+3. `event`，事件对象，可以调用 `setData()`、`stopPropagation()`、`preventDefault()`分别实现事件上下文设置、动作干预、事件干预，可以通过 `event.data` 获取事件上下文。
+
+这里主要使用的是 `context` 或 `event`。
+
+### 重新请求用户信息
+
+无感刷新系统的用户信息 `queryUerInfoFn` ，使用方式如下：
+
+``` json
+"onEvent": {
+  "submitSucc": {
+    "weight": 0,
+    "actions": [
+      {
+        "actionType": "custom",
+        "script": "context.props.env.fanjimuFn.queryUerInfoFn()",
+        "args": {
+        },
+        "ignoreError": false
+      }
+    ]
+  }
+}
+```
+
+或者
+
+``` json
+"onEvent": {
+  "submitSucc": {
+    "weight": 0,
+    "actions": [
+      {
+        "actionType": "custom",
+        "script": "event.context.env.fanjimuFn.queryUerInfoFn()",
+        "args": {
+        },
+        "ignoreError": false
+      }
+    ]
+  }
+}
+```
+
+### 重新请求菜单（包括正式环境和测试环境）
+
+无感刷新系统的菜单 `queryMenuFn` ，使用方式如下：
+
+``` json
+"onEvent": {
+  "submitSucc": {
+    "weight": 0,
+    "actions": [
+      {
+        "actionType": "custom",
+        "script": "context.props.env.fanjimuFn.queryMenuFn()",
+        "args": {
+        },
+        "ignoreError": false
+      }
+    ]
+  }
+}
+```
+
+或者
+
+``` json
+"onEvent": {
+  "submitSucc": {
+    "weight": 0,
+    "actions": [
+      {
+        "actionType": "custom",
+        "script": "event.context.env.fanjimuFn.queryMenuFn()",
+        "args": {
+        },
+        "ignoreError": false
+      }
+    ]
+  }
+}
+```
+
+### 重新请求正式环境菜单
+
+无感刷新系统的菜单 `queryProdMenuFn` ，使用方式如下：
+
+``` json
+"onEvent": {
+  "submitSucc": {
+    "weight": 0,
+    "actions": [
+      {
+        "actionType": "custom",
+        "script": "context.props.env.fanjimuFn.queryProdMenuFn()",
+        "args": {
+        },
+        "ignoreError": false
+      }
+    ]
+  }
+}
+```
+
+或者
+
+``` json
+"onEvent": {
+  "submitSucc": {
+    "weight": 0,
+    "actions": [
+      {
+        "actionType": "custom",
+        "script": "event.context.env.fanjimuFn.queryProdMenuFn()",
+        "args": {
+        },
+        "ignoreError": false
+      }
+    ]
+  }
+}
+```
+
+### 重新请求测试环境菜单
+
+无感刷新系统的菜单 `queryQaMenuFn` ，使用方式如下：
+
+``` json
+"onEvent": {
+  "submitSucc": {
+    "weight": 0,
+    "actions": [
+      {
+        "actionType": "custom",
+        "script": "context.props.env.fanjimuFn.queryQaMenuFn()",
+        "args": {
+        },
+        "ignoreError": false
+      }
+    ]
+  }
+}
+```
+
+或者
+
+``` json
+"onEvent": {
+  "submitSucc": {
+    "weight": 0,
+    "actions": [
+      {
+        "actionType": "custom",
+        "script": "event.context.env.fanjimuFn.queryQaMenuFn()",
+        "args": {
+        },
+        "ignoreError": false
+      }
+    ]
+  }
+}
+```
+
+### 重新请求系统配置
+
+无感刷新系统配置 `queryConfigMapFn` ，使用方式如下：
+
+``` json
+"onEvent": {
+  "submitSucc": {
+    "weight": 0,
+    "actions": [
+      {
+        "actionType": "custom",
+        "script": "context.props.env.fanjimuFn.queryConfigMapFn()",
+        "args": {
+        },
+        "ignoreError": false
+      }
+    ]
+  }
+}
+```
+
+或者
+
+``` json
+"onEvent": {
+  "submitSucc": {
+    "weight": 0,
+    "actions": [
+      {
+        "actionType": "custom",
+        "script": "event.context.env.fanjimuFn.queryConfigMapFn()",
+        "args": {
+        },
+        "ignoreError": false
+      }
+    ]
+  }
+}
+```
+
+### 重新请求成功回调
+
+无感刷新系统配置 `querySuccessCallbackFn` ，使用方式如下：
+
+``` json
+"onEvent": {
+  "submitSucc": {
+    "weight": 0,
+    "actions": [
+      {
+        "actionType": "custom",
+        "script": "context.props.env.fanjimuFn.querySuccessCallbackFn()",
+        "args": {
+        },
+        "ignoreError": false
+      }
+    ]
+  }
+}
+```
+
+或者
+
+``` json
+"onEvent": {
+  "submitSucc": {
+    "weight": 0,
+    "actions": [
+      {
+        "actionType": "custom",
+        "script": "event.context.env.fanjimuFn.querySuccessCallbackFn()",
+        "args": {
+        },
+        "ignoreError": false
+      }
+    ]
+  }
+}
+```
+
+## 成功回调
+
+成功回调是用于在低代码中某些操作结束之后，无对应的操作事件去执行上面的系统方法时，可以在 **系统设置** / **成功回调** 内进行配置，配置启用的接口会在调用成功之后，去调用系统方法来达到更新系统数据的目的。
+
+![成功回调](./images/abutment/20231130170603.png)
+
+![成功回调配置的内容](./images/abutment/20231130171106.png)
+
+### 成功回调配置的内容
+
+1. 接口前缀：选择接口对应的前缀，前缀取自配置的 [axiosBaseURL](./../config/web.md#axiosbaseurl) ；
+2. 接口链接：接口是由类似 `${域名信息}${接口前缀}${接口链接}` 组成，**注意接口链接需要带`/`**；
+3. 事件集：对应上面的系统方法，有 请求用户信息、请求系统配置、请求菜单、请求正式环境菜单、请求测试环境菜单、请求成功回调 等事件供选择，选择的事件集会在对应接口成功之后进行依次执行；
+4. 是否启用：只有启用的才会在接口成功之后执行，未启用的不执行。
