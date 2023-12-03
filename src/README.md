@@ -34,6 +34,7 @@ highlights:
       - title: 一套代码支持 开发、测试、正式 3重环境。
       - title: 支持 开发、测试 环境切换版本。
       - title: 支持版本查看、发布版本、版本历史、代码对比。
+      - title: 低代码平台，前端最少提效50%，后端也可以配置页面，真正意义上的降本增效。
 
   - header: 功能项
     image: /assets/image/features.svg
@@ -82,7 +83,7 @@ highlights:
         
       - title: 浏览量
         icon: chalkboard
-        details: 根据请求页面内容的接口进行统计，更精准查看页面浏览量
+        details: 根据请求页面内容的接口进行统计，更精准查看页面浏览量、实时浏览量、浏览趋势
         link: ./use/view.md
 
       - title: 查看日志
