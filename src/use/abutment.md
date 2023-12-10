@@ -341,7 +341,7 @@ date: 2023-07-01
 
 ### 重新请求成功回调
 
-无感刷新系统配置 `querySuccessCallbackFn` ，使用方式如下：
+无感刷新请求成功回调 `querySuccessCallbackFn` ，使用方式如下：
 
 ``` json
 "onEvent": {
@@ -379,9 +379,49 @@ date: 2023-07-01
 }
 ```
 
+### 重新请求系统外观配置
+
+无感刷新系统外观配置 `queryLayoutConfigFn` ，使用方式如下：
+
+``` json
+"onEvent": {
+  "submitSucc": {
+    "weight": 0,
+    "actions": [
+      {
+        "actionType": "custom",
+        "script": "context.props.env.fanjimuFn.queryLayoutConfigFn()",
+        "args": {
+        },
+        "ignoreError": false
+      }
+    ]
+  }
+}
+```
+
+或者
+
+``` json
+"onEvent": {
+  "submitSucc": {
+    "weight": 0,
+    "actions": [
+      {
+        "actionType": "custom",
+        "script": "event.context.env.fanjimuFn.queryLayoutConfigFn()",
+        "args": {
+        },
+        "ignoreError": false
+      }
+    ]
+  }
+}
+```
+
 ## 成功回调
 
-成功回调是用于在低代码中某些操作结束之后，无对应的操作事件去执行上面的系统方法时，可以在 **系统设置** / **成功回调** 内进行配置，配置启用的接口会在调用成功之后，去调用系统方法来达到更新系统数据的目的。
+成功回调是用于在低代码中某些操作结束之后，无对应的操作事件去执行上面的系统方法时，可以在 **系统设置** / **系统配置** / **成功回调** 内进行配置，配置启用的接口会在调用成功之后，去调用系统方法来达到更新系统数据的目的。
 
 ![成功回调](./images/abutment/20231130170603.png)
 
