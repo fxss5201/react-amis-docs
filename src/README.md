@@ -104,7 +104,7 @@ highlights:
       - title: 系统设置
         icon: gears
         details: 动态设置系统公共变量，在所有页面的数据域内可获取公共变量
-        link: ./use/configMap.md
+        link: ./config/systemConfig.md
           
       - title: mock数据
         icon: lemon
