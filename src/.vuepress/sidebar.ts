@@ -22,6 +22,12 @@ export default sidebar({
       children: "structure",
     },
     {
+      text: "大屏配置",
+      icon: "chart-line",
+      prefix: "largeScreen/",
+      children: "structure",
+    },
+    {
       text: "扩展",
       icon: "retweet",
       prefix: "extend/",

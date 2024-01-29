@@ -18,6 +18,11 @@ export default navbar([
     link: "/config/",
   },
   {
+    text: "大屏配置",
+    icon: "chart-line",
+    link: "/largeScreen/",
+  },
+  {
     text: "扩展",
     icon: "retweet",
     link: "/extend/",
