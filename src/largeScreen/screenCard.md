@@ -24,8 +24,18 @@ date: 2024-01-29
 样式覆盖 `layoutStyle` 是通过css优先级直接调整覆盖页面样式，例如：
 
 ``` css
-.large-screen-layout .large-screen-layout-header {
-  height: 100px;
+.fan-screen-card .fan-screen-card-header {
+  height: 80px;
+}
+```
+
+此时模块头部的高度将由默认的 50px 调整为 80px 。 css 会作用于符合 css 的所有DOM元素，如果需要唯一设置，请在前面添加特殊的前缀，例如：
+
+![特殊的前缀](./images/screenCard/20240130205335.png)
+
+```css
+.fan-screen-card-1.fan-screen-card .fan-screen-card-header {
+  height: 80px;
 }
 ```
 
@@ -35,7 +45,7 @@ date: 2024-01-29
 |----|----|----|----|----|
 |标题名称|`headerTitle`|标题名称| - |`string`|
 |标题样式|`headerTitleClassName`|定义样式，配置在`fan-screen-card-header_title`DOM元素上| - |`string`|
-|字体颜色|`fontColor`|字体颜色，默认从[./layout.md#总体配置](字体颜色) 继承| - |`string`|
+|字体颜色|`fontColor`|字体颜色，默认从 [./layout.md#总体配置](字体颜色)  继承| - |`string`|
 
 ### 头部右侧
 
@@ -63,7 +73,7 @@ date: 2024-01-29
 
 **`dataFilter`**：
 
-``` js
+```js{1,12-17,22-39}
 const curFlag = 'lineCharts';
 
 if (window.fanEchartsIntervals && window.fanEchartsIntervals.get(curFlag)) {
@@ -114,3 +124,5 @@ if (window.fanEchartsIntervals) {
 
 return config;
 ```
+
+修改高亮行 1 `curFlag` 设置为对应的 Chart 图表的 `className`，12-17 行是插入数据，22-39 为对应数据的切换展示方式。
